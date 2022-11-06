@@ -1,0 +1,344 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Arduino and Power PCD"
+Date "2021-12-20"
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 "_edKotinsky"
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MCU_Module:Arduino_Nano_v3.x A1
+U 1 1 61C00256
+P 5650 3800
+F 0 "A1" H 6175 4725 50  0000 C CNN
+F 1 "Arduino_Nano_v3.x" H 6475 4625 50  0000 C CNN
+F 2 "Module:Arduino_Nano" H 5650 3800 50  0001 C CIN
+F 3 "http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf" H 5650 3800 50  0001 C CNN
+	1    5650 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Linear:LM78M05_TO252 U1
+U 1 1 61C01DA7
+P 5000 1925
+F 0 "U1" H 5000 2167 50  0000 C CNN
+F 1 "LM78M05_TO252" H 5000 2076 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:TO-252-2" H 5000 2150 50  0001 C CIN
+F 3 "https://www.onsemi.com/pub/Collateral/MC78M00-D.PDF" H 5000 1875 50  0001 C CNN
+	1    5000 1925
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:D_Small D1
+U 1 1 61C03021
+P 6575 1925
+F 0 "D1" H 6575 2132 50  0000 C CNN
+F 1 "1N4004" H 6575 2041 50  0000 C CNN
+F 2 "Diode_SMD:D_SMA_Handsoldering" V 6575 1925 50  0001 C CNN
+F 3 "~" V 6575 1925 50  0001 C CNN
+	1    6575 1925
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x04 J4
+U 1 1 61C037AB
+P 7200 3700
+F 0 "J4" H 7300 4000 50  0000 L CNN
+F 1 "Module" H 7275 3900 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical" H 7200 3700 50  0001 C CNN
+F 3 "~" H 7200 3700 50  0001 C CNN
+	1    7200 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J1
+U 1 1 61C03FE1
+P 7200 1925
+F 0 "J1" H 7280 1917 50  0000 L CNN
+F 1 "Power" H 7280 1826 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical" H 7200 1925 50  0001 C CNN
+F 3 "~" H 7200 1925 50  0001 C CNN
+	1    7200 1925
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP_Small C2
+U 1 1 61C04F80
+P 6125 2175
+F 0 "C2" H 6213 2221 50  0000 L CNN
+F 1 "22u" H 6213 2130 50  0000 L CNN
+F 2 "Capacitor_Tantalum_SMD:CP_EIA-7343-31_Kemet-D_Pad2.25x2.55mm_HandSolder" H 6125 2175 50  0001 C CNN
+F 3 "~" H 6125 2175 50  0001 C CNN
+	1    6125 2175
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J2
+U 1 1 61C0583D
+P 3975 3400
+F 0 "J2" H 4125 3400 50  0000 C CNN
+F 1 "Calibration" H 4275 3300 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical" H 3975 3400 50  0001 C CNN
+F 3 "~" H 3975 3400 50  0001 C CNN
+	1    3975 3400
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J3
+U 1 1 61C07379
+P 3975 3750
+F 0 "J3" H 4125 3750 50  0000 C CNN
+F 1 "MODE" H 4175 3650 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical" H 3975 3750 50  0001 C CNN
+F 3 "~" H 3975 3750 50  0001 C CNN
+	1    3975 3750
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	4175 3400 5150 3400
+Wire Wire Line
+	5150 3500 4775 3500
+Wire Wire Line
+	4775 3500 4775 3750
+Wire Wire Line
+	4775 3750 4175 3750
+$Comp
+L Connector_Generic:Conn_01x04 J5
+U 1 1 61C0B8B8
+P 7200 4400
+F 0 "J5" H 7300 4700 50  0000 L CNN
+F 1 "LCD" H 7275 4600 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical" H 7200 4400 50  0001 C CNN
+F 3 "~" H 7200 4400 50  0001 C CNN
+	1    7200 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5150 4100 4775 4100
+Wire Wire Line
+	7000 4300 6150 4300
+Wire Wire Line
+	6150 4200 6825 4200
+Wire Wire Line
+	6825 4200 6825 4400
+Wire Wire Line
+	6825 4400 7000 4400
+Wire Wire Line
+	7000 4500 6625 4500
+Wire Wire Line
+	7000 4600 6400 4600
+Connection ~ 6400 4600
+Wire Wire Line
+	6400 4600 6400 5000
+$Comp
+L power:GND #PWR07
+U 1 1 61C11F15
+P 6400 5000
+F 0 "#PWR07" H 6400 4750 50  0001 C CNN
+F 1 "GND" H 6405 4827 50  0000 C CNN
+F 2 "" H 6400 5000 50  0001 C CNN
+F 3 "" H 6400 5000 50  0001 C CNN
+	1    6400 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR06
+U 1 1 61C12D28
+P 5750 5000
+F 0 "#PWR06" H 5750 4750 50  0001 C CNN
+F 1 "GND" H 5755 4827 50  0000 C CNN
+F 2 "" H 5750 5000 50  0001 C CNN
+F 3 "" H 5750 5000 50  0001 C CNN
+	1    5750 5000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5750 4800 5750 4900
+Wire Wire Line
+	5650 4800 5650 4900
+Wire Wire Line
+	5650 4900 5750 4900
+Connection ~ 5750 4900
+Wire Wire Line
+	5750 4900 5750 5000
+Text Label 6625 4500 0    50   ~ 0
+VDD
+Text Label 6625 3700 0    50   ~ 0
+VCC
+Text Label 6625 3900 0    50   ~ 0
+FRQ
+Text Label 4775 4100 0    50   ~ 0
+FRQ
+$Comp
+L power:GND #PWR05
+U 1 1 61C154A3
+P 4450 4975
+F 0 "#PWR05" H 4450 4725 50  0001 C CNN
+F 1 "GND" H 4455 4802 50  0000 C CNN
+F 2 "" H 4450 4975 50  0001 C CNN
+F 3 "" H 4450 4975 50  0001 C CNN
+	1    4450 4975
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4450 4975 4450 3850
+Wire Wire Line
+	4450 3500 4175 3500
+Wire Wire Line
+	4175 3850 4450 3850
+Connection ~ 4450 3850
+Wire Wire Line
+	4450 3850 4450 3500
+Wire Wire Line
+	6675 1925 7000 1925
+Wire Wire Line
+	5550 2800 5550 1925
+Wire Wire Line
+	5300 1925 5550 1925
+Connection ~ 5550 1925
+$Comp
+L power:GND #PWR03
+U 1 1 61C1F70A
+P 6125 2425
+F 0 "#PWR03" H 6125 2175 50  0001 C CNN
+F 1 "GND" H 6130 2252 50  0000 C CNN
+F 2 "" H 6125 2425 50  0001 C CNN
+F 3 "" H 6125 2425 50  0001 C CNN
+	1    6125 2425
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6125 2275 6125 2425
+Wire Wire Line
+	6125 2075 6125 1925
+Wire Wire Line
+	5850 2800 5850 2525
+Text Label 5850 2525 0    50   ~ 0
+VCC
+Connection ~ 6125 1925
+Wire Wire Line
+	6125 1925 6475 1925
+Wire Wire Line
+	5550 1925 6125 1925
+$Comp
+L Device:CP_Small C1
+U 1 1 61C23AC6
+P 4450 2175
+F 0 "C1" H 4538 2221 50  0000 L CNN
+F 1 "47u" H 4538 2130 50  0000 L CNN
+F 2 "Capacitor_Tantalum_SMD:CP_EIA-3528-21_Kemet-B_Pad1.50x2.35mm_HandSolder" H 4450 2175 50  0001 C CNN
+F 3 "~" H 4450 2175 50  0001 C CNN
+	1    4450 2175
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR01
+U 1 1 61C23ACC
+P 4450 2425
+F 0 "#PWR01" H 4450 2175 50  0001 C CNN
+F 1 "GND" H 4455 2252 50  0000 C CNN
+F 2 "" H 4450 2425 50  0001 C CNN
+F 3 "" H 4450 2425 50  0001 C CNN
+	1    4450 2425
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4450 2275 4450 2425
+Wire Wire Line
+	4450 2075 4450 1925
+Wire Wire Line
+	4450 1925 4700 1925
+$Comp
+L power:GND #PWR02
+U 1 1 61C247FB
+P 5000 2425
+F 0 "#PWR02" H 5000 2175 50  0001 C CNN
+F 1 "GND" H 5005 2252 50  0000 C CNN
+F 2 "" H 5000 2425 50  0001 C CNN
+F 3 "" H 5000 2425 50  0001 C CNN
+	1    5000 2425
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5000 2425 5000 2225
+$Comp
+L power:GND #PWR04
+U 1 1 61C256E2
+P 6800 2425
+F 0 "#PWR04" H 6800 2175 50  0001 C CNN
+F 1 "GND" H 6805 2252 50  0000 C CNN
+F 2 "" H 6800 2425 50  0001 C CNN
+F 3 "" H 6800 2425 50  0001 C CNN
+	1    6800 2425
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6800 2425 6800 2025
+Wire Wire Line
+	6800 2025 7000 2025
+Text Label 4450 1925 0    50   ~ 0
+VDD
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 61C27F4D
+P 7100 6250
+F 0 "H1" H 7200 6296 50  0000 L CNN
+F 1 "MountingHole" H 7200 6205 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 7100 6250 50  0001 C CNN
+F 3 "~" H 7100 6250 50  0001 C CNN
+	1    7100 6250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 61C28970
+P 7825 6250
+F 0 "H2" H 7925 6296 50  0000 L CNN
+F 1 "MountingHole" H 7925 6205 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 7825 6250 50  0001 C CNN
+F 3 "~" H 7825 6250 50  0001 C CNN
+	1    7825 6250
+	1    0    0    -1  
+$EndComp
+NoConn ~ 5750 2800
+NoConn ~ 6150 3200
+NoConn ~ 6150 3300
+NoConn ~ 6150 3600
+NoConn ~ 5150 3200
+NoConn ~ 5150 3300
+NoConn ~ 6150 3900
+NoConn ~ 6150 4000
+NoConn ~ 6150 4100
+NoConn ~ 6150 4400
+NoConn ~ 6150 4500
+NoConn ~ 5150 4500
+NoConn ~ 5150 4400
+NoConn ~ 5150 4300
+NoConn ~ 5150 4200
+NoConn ~ 5150 4000
+NoConn ~ 5150 3900
+NoConn ~ 5150 3800
+NoConn ~ 5150 3700
+NoConn ~ 5150 3600
+Text Notes 7325 3900 0    50   ~ 0
+GND\nVCC\nADC\nFRQ
+Wire Wire Line
+	7000 3800 6150 3800
+Wire Wire Line
+	6400 3600 7000 3600
+Wire Wire Line
+	6400 3600 6400 4600
+Wire Wire Line
+	7000 3700 6625 3700
+Wire Wire Line
+	7000 3900 6625 3900
+Text Notes 7325 4600 0    50   ~ 0
+SCL\nSDA\nVCC\nGND
+$EndSCHEMATC
